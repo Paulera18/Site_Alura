@@ -1,0 +1,201 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --font-principal: 'inter';
+    --botao-azul-efeito:#75b2fc;
+}
+
+body {
+    background-color: var(--cor-de-fundo); /*cor de funod da pagina*/
+    color: var(--branco-principal);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+* {
+    margin: 0;
+    padding: 0; /*certifica que nao vai ter nada de margem*/
+}
+
+.principal {
+    background-image: url(Background.png);/*coloca uma imagem no fundo*/
+    background-repeat: no-repeat;/*tira a repetição da imagem*/
+    background-size: contain;/*deixa ela na tela tona*/
+    align-items: center;/*alinhamento dos items*/
+    text-align: center;/*centraçliza o texto*/
+    
+}
+
+.container {
+    height: 100vh;
+    display: grid; /*serve para separar elementos*/
+    grid-template-columns: 33% 33% 33%; /* pra cada lado*/
+
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;/*tira as pontas das bordas*/
+    padding: 1em; /*tamanho do botao*/
+    color: var(--branco-principal);
+    display: block;/*exibe como bloco um embaixo do outro*/
+    text-decoration: none; /*tira o sublinhado*/
+    margin-bottom: 1em;/*espacamento entre os botoes*/
+
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);/*linha solida transparente cor branca*/
+
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 1em 1em;
+    font-size: 30px;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;/*quando coloca 4 valores funciona como um relogi os espacamentos*/
+}
+
+.container__caixa {
+    margin: 6em; /*espacamento entre esquerda e direita*/
+    display: block;
+    margin: 0 0 0 8em;
+}
+
+.secundario__imagem {
+    width: 150%;
+}
+
+.secundario {
+    align-items: center;/*alinha os items no centro da coluna*/
+    margin: 0 10em;
+    gap: 20em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 2em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+/* hoje*/
+.dispositivos__lista {
+    display: flex;
+    justify-content: center; /*centralizar*/
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center; /*centralizar */
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*footer*/
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a:hover { /*passa o mouse por cima*/
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+ 
+/*Responsivo*/
+@media screen and (max-width: 768px) {
+
+    .container {
+        display: block; /*cada elemento em cima do outro*/
+        background-image: none;
+    }
+
+    .container__imagem {
+        width: 50vw; /*ocupa 50% da pagina, tamanho*/
+    }
+
+    .container__caixa {
+        margin: 2em 2em; /*topo e baixo, direita e esquerda*/
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+}
